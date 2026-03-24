@@ -32,7 +32,7 @@ required_packages <- c(
   "estimatr",       # lm_robust() with HC and cluster-robust SE
   "rdrobust",       # Local polynomial RDD estimation
   "rddensity",      # Cattaneo-Jansson-Ma density discontinuity test
-  "rdd",       	    # McCrary density test
+  "rddtools",       	    # McCrary density test
   "vip",
 
   # Results / tables
