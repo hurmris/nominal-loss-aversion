@@ -9,18 +9,6 @@ Replication code for the VATT Working Paper No. 178:
 ## Abstract
 Households are averse to realizing nominal housing market losses. Reduced household mobility, in an attempt to avoid selling at a loss, implies misallocation of housing and can affect the functioning of the labor market. However, direct evidence on mobility responses is scarce. This paper studies the effect of expected losses on homeowners' propensity to move using administrative data on housing transactions matched with detailed data on household characteristics. We use an ensemble machine learning method to estimate expected prices for the universe of apartments in the three largest travel-to-work areas in Finland in 2006–2018. We find that homeowners below the zero-return cutoff are 51% less likely to sell than those above the cutoff. The effect of loss aversion on mobility is somewhat smaller than the effect on sales. Homeowners with an expected loss are more likely to move without selling their previous home. Renting out their previous apartment seems to enable homeowners to move without realizing nominal losses. Expected losses also reduce inter-regional mobility, which suggests that loss aversion can lead to misallocation of the labor force.
 
-## Repository Structure
-
-```
-├── install_packages.R                  # Installs all required R packages
-├── data_processing/                    # Data cleaning and panel construction (scripts 01–18)
-│   └── README_data_processing.md       # Detailed data processing documentation
-└── econometric_modelling/
-    ├── 01_price_modelling/             # Ensemble hedonic price model (scripts 00–06)
-    ├── 02_main_analysis/               # Main analysis and results (scripts 00–09)
-    └── README_econometric_modelling.md # Detailed modelling documentation
-```
-
 ## Requirements
 
 - **R** ≥ 4.3.1. Run `install_packages.R` once to install all dependencies.
