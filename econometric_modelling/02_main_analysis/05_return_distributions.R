@@ -231,15 +231,22 @@ total_obs <- panel %>%
 
 
 ## Mccrary
-mcrary <- rdd::DCdensity(running_var, cutpoint = 0, plot = FALSE, ext.out = TRUE)
+rdd_dat <- rddtools::rdd_data(
+  y = rep(0, length(running_var)),  # y is required by rdd_data but irrelevant for density test
+  x = running_var,
+  cutpoint = 0
+)
+
+mcrary_test <- rddtools::dens_test(rdd_dat, plot = FALSE)
+
 mcrary <- tibble(
-  theta = mcrary$theta,
-  se = mcrary$se,
-  z = mcrary$z,
-  p = mcrary$p,
-  binsize = mcrary$binsize,
-  bw = mcrary$bw,
-  cutpoint = mcrary$cutpoint
+  theta    = mcrary_test$test.output$theta,
+  se       = mcrary_test$test.output$se,
+  z        = mcrary_test$test.output$z,
+  p        = mcrary_test$test.output$p,
+  binsize  = mcrary_test$test.output$binsize,
+  bw       = mcrary_test$test.output$bw,
+  cutpoint = mcrary_test$test.output$cutpoint
 )
 
 write.csv(mcrary, file = paste0(results_path, "mcrary_density_test.csv"))
