@@ -51,4 +51,4 @@ Lyytikäinen acknowledges funding from the Strategic Research Council for the Su
 
 ## License
 
-This repository contains replication code only. The underlying data are confidential and subject to Statistics Finland's access and use restrictions.
+This project is distributed under [MIT Licence](https://github.com/hurmris/nominal-loss-aversion/blob/main/LICENSE). The underlying data are confidential and subject to Statistics Finland's access and use restrictions.
