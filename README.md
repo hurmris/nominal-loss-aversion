@@ -37,16 +37,6 @@ The analysis proceeds in three stages. Scripts must be run in order — each sta
 
 **3. Main analysis** (`econometric_modelling/02_main_analysis/`). Expected returns (predicted price / purchase price − 1) serve as the running variable in a regression discontinuity type design at the zero-return cutoff. The main specification is linear in expected return with a slope change at the cutoff, estimated within a ±20% bandwidth with a ±5% donut hole. Run `00_create_analysis_data.R` first, then any analysis script independently. See `README_econometric_modelling.md` for a mapping of scripts to tables and figures in the paper.
 
-## Data Sources
-
-All data are accessed through Statistics Finland's FIONA remote access system:
-
-| Source | Description |
-|--------|-------------|
-| Transfer tax records (Varainsiirtovero) | Universe of housing transactions with prices, dates and ownership details |
-| FOLK registers | Household demographics, income, employment, residence and mortgage data |
-| Building and apartment registers | Characteristics (size, age, type, condition, coordinates) |
-| StatFi spatial classifications | Municipality codes, postcodes, price area classifications, urban/rural typology |
 
 ## Citation
 
